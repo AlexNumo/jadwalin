@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 122px;
     >h2{
         font-family: var(--main-font-family);
         font-weight: var(--regular-font-weight);
@@ -20,5 +21,20 @@
         color: #848199;
         font-size: 18px;
         line-height: 27px;
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    .price{
+        width: 926px;
+        margin: auto;
+        display: flex;
+        align-items: flex-end;
+        padding: 0px;
+    }
+    .price-position {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
     }
 }
