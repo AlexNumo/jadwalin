@@ -7,13 +7,40 @@
     border-radius: 26px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    background: rgba(255, 255, 255, 0.64);
 }
 
 .choose-plan{
     padding: 32px 28px 48px 28px;
+    border-radius: 26px;
+    margin: 8px;
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 26px;
+        color: var(--color-rose);
+        background-color: #403879;
+        width: 121px;
+        height: 27px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        font-family: var(--main-font-family);
+        font-weight: 800;
+        line-height: 15px;
+        font-size: 10px;
+    }
     >p{
         font-size: 17px;
+    }
+    >h3{
+        margin-top: 20px;
+        color: var(--color-purple);
+        line-height: 42px;
+        font-size: 28px;
     }
     >button{
         background-color: var(--color-purple);
@@ -39,8 +66,14 @@
         }
 }
 
+.description-list{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 .circle{
     width: 20px;
+    margin-right: 10px;
 }
 
 // .subscription-position{

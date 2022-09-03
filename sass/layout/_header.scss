@@ -1,34 +1,58 @@
-.header{
-  padding: 32px 24px 32px 24px;
+@media screen and (max-width: 1199px) {
+  .header{
+    padding: 32px 24px 32px 24px;
+  }
+
+  .header-position{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .burger{
+    width: 22px;
+    height: 15px;
+    fill: var(--color-purple);
+  }
+
+  .logo-position{
+    display: flex;
+    align-items:center;
+  }
+
+  .join{
+    display: none;
+  }
+
+  .logo{
+    width: 22px;
+    height: 30px;
+  }
+
+  .logo-name{
+    font-family: var(--main-font-family);
+    font-weight: var(--bold-font-weight);
+    color: var(--color-purple);
+  }
 }
 
-.header-position{
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 1199px) {
+  .header {
+      padding: 32px 50px 73px 50px;
+    }
+
+  .join{
+    width: 124px;
+    height: 38px;
+    border-radius: 26px;
+    background-color: var(--color-rose);
+    font-family: var(--main-font-family);
+    font-weight: var(--regular-font-weight);
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+  }
 }
 
-.burger{
-  width: 22px;
-  height: 15px;
-  fill: var(--color-purple);
-}
-
-.logo-position{
-  display: flex;
-  align-items:center;
-}
-
-.logo{
-  width: 22px;
-  height: 30px;
-  // fill: var(--color-purple);
-}
-
-.logo-name{
-  font-family: var(--main-font-family);
-  font-weight: var(--bold-font-weight);
-  color: var(--color-purple);
-}
 
 
 

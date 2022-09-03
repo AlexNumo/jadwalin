@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -24,6 +24,7 @@
                 <img class="logo" src="./img/Logo.svg" alt="Logo">
                 <p class="logo-name">Jadwalin</p>
             </a>
+            <button class="join">Join Now</button>
         </div>
     </header>
     <section class="price">
@@ -34,17 +35,17 @@
     </section>
     <section class="subscription">
         <div class="subscription-position">
-            <button>monthly</button>
-            <button>yearly</button>
+            <button id="monthly" class="active-subscription">monthly</button>
+            <button id="yearly">yearly</button>
         </div>
     </section>
     <section class="plans">
         <div class="plans-position">
-            <div class="choose-plan">
-                <p class="description"><span>$19</span>/month</p>
+            <div id="starter" class="choose-plan">
+                <p class="description"><span id="starter-price">$12</span>/month</p>
                 <h3 class="description">Starter</h3>
                 <p class="description">Unleash the power of automation.</p>
-                <ul>
+                <ul class="description-list">
                     <li class="description">
                         <img class="circle" src="./img/circle.svg" alt="check-circle">
                         Multi-step Zaps
@@ -60,12 +61,65 @@
                 </ul>
                 <button>Choose plan</button>
             </div>
-            <h2>D</h2>
+            <div id="professional" class="choose-plan">
+                <p class="description"><span id="professional-price">$36</span>/month</p>
+                <h3 class="description">Professional</h3>
+                <p class="description">Advanced tools to take your work to the next level.</p>
+                <ul class="description-list">
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Multi-step Zaps
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Unlimited Premium Apps
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        50 Users team
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Shared Workspace
+                    </li>
+                </ul>
+                <button>Choose plan</button>
+            </div>
+            <div id="company" class="choose-plan active-plan">
+                <div>
+                    <p>most popular</p>
+                </div>
+                <p class="description"><span id="company-price">$56</span>/month</p>
+                <h3 class="description">Company</h3>
+                <p class="description">Automation plus enterprise-grade features.</p>
+                <ul class="description-list">
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Multi-step Zap
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Unlimited Premium Apps
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Unlimited Users Team
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Advanced Admin
+                    </li>
+                    <li class="description">
+                        <img class="circle" src="./img/circle.svg" alt="check-circle">
+                        Custom Data Retention
+                    </li>
+                </ul>
+                <button>Choose plan</button>
+            </div>
         </div>
     </section>
 
-    <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/active.js"></script>
 </body>
 
 </html>

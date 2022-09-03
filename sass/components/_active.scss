@@ -1,0 +1,25 @@
+.active-subscription{
+    color: var(--color-white) !important;
+    background-color: var(--color-rose) !important;
+}
+
+.active-plan{
+    background-color: var(--color-purple) !important;
+    >h3{
+        color: #ffffff !important;
+    }
+
+    >p{
+        color: #ffffff !important;
+        >span{
+            color: #ffffff !important;
+        }
+    }
+    >ul>li{
+        color: #ffffff !important;
+    }
+    >button{
+        background-color: var(--color-rose) !important;
+    }
+    
+}

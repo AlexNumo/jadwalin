@@ -1,9 +1,8 @@
-@import "./utils/visualy-hidden";
 @import "./utils/variables";
 @import "./base/common";
 @import "./base/background";
-@import "./layout/header";
+@import "./components/active";
 @import "./layout/price";
+@import "./layout/header";
 @import "./layout/subscription";
 @import "./layout/plans";
-@import "./layout/footer";
