@@ -10,22 +10,26 @@
     border-radius: 22px;
     width: 250px;
     margin: auto;
-    >button{
-        height: 44px;
-        width: 125px;
-        text-transform: uppercase;
-        border-radius: 22px;
-        box-shadow: 0px 6px 12px rgba(82, 67, 194, 0.16);;
-        background-color: var(--color-white);
-        font-family: var(--main-font-family);
-        font-weight: var(--medium-font-weight);
-        color: var(--color-purple);
-        line-height: 18px;
-        font-size: 12px;
-    }
+}
+.subscription-btn{
+    height: 44px;
+    width: 125px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    box-shadow: 0px 6px 12px rgba(82, 67, 194, 0.16);;
+    background-color: var(--color-white);
+    font-family: var(--main-font-family);
+    font-weight: var(--medium-font-weight);
+    color: var(--color-purple);
+    line-height: 18px;
+    font-size: 12px;
 }
 
-@media screen and (min-width: 1199px) {
+.subscription-btn:hover{
+    background-color: var(--color-btn) !important;
+}
+
+@media screen and (min-width: 1200px) {
     .subscription {
         padding: 0px;
     }

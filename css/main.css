@@ -2,12 +2,13 @@
   --main-font-family: "Poppins", sans-serif;
   --main-font-style: normal;
   --regular-font-weight: 400;
-  --regular-font-weight: 500;
+  --medium-font-weight: 500;
   --bold-font-weight: 700;
   --color-purple: #231D4F;
   --color-rose: #BB6BD9;
   --color-white: #F5F5FA;
   --color-brown:#F2DAD5;
+  --color-btn:#A847CC;
 }
 
 a {
@@ -39,6 +40,7 @@ li {
 button {
   border: none;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .background {
@@ -50,33 +52,77 @@ button {
   background-color: var(--color-rose) !important;
 }
 
-.active-plan {
-  background-color: var(--color-purple) !important;
-  box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
-}
-.active-plan > h3 {
+.active-plan > div > h3 {
   color: #ffffff !important;
 }
-.active-plan > p {
+.active-plan > div > p {
   color: #ffffff !important;
 }
-.active-plan > p > span {
+.active-plan > div > p > span {
   color: #ffffff !important;
 }
-.active-plan > ul > li {
+.active-plan > div > ul > li {
   color: #ffffff !important;
 }
 .active-plan > button {
   background-color: var(--color-rose) !important;
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .active-plan {
-    position: relative;
-    top: -26px;
+    background-color: var(--color-purple) !important;
+    box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
   }
-  .active-plan > p {
-    padding-top: 26px;
+  .active-background {
+    background-color: var(--color-purple) !important;
+    box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+    padding: 20px 30px 20px 30px;
+    border-radius: 26px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .active-background {
+    position: relative;
+    top: -20px;
+    height: 473px;
+    background-color: var(--color-purple) !important;
+    box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+    padding: 35px 30px 20px 30px;
+    border-radius: 26px;
+  }
+}
+.animation-open {
+  animation: open-anim 0.8s linear infinite;
+  animation-iteration-count: 1;
+}
+
+.animation-close {
+  animation: close-anim 0.7s linear infinite;
+  animation-iteration-count: 1;
+}
+
+@keyframes open-anim {
+  25% {
+    opacity: 0.7;
+  }
+  45% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes close-anim {
+  from {
+    background-color: var(--color-rose);
+  }
+  to {
+    background-color: var(--color-white);
   }
 }
 .price {
@@ -105,7 +151,7 @@ button {
   line-height: 27px;
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .price {
     width: 926px;
     margin: auto;
@@ -150,12 +196,12 @@ button {
   color: var(--color-purple);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .join {
     display: none;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .header {
     padding: 32px 50px 73px 50px;
   }
@@ -169,6 +215,9 @@ button {
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
+  }
+  .join:hover {
+    background-color: var(--color-btn);
   }
 }
 .subscription {
@@ -184,7 +233,8 @@ button {
   width: 250px;
   margin: auto;
 }
-.subscription-position > button {
+
+.subscription-btn {
   height: 44px;
   width: 125px;
   text-transform: uppercase;
@@ -198,7 +248,11 @@ button {
   font-size: 12px;
 }
 
-@media screen and (min-width: 1199px) {
+.subscription-btn:hover {
+  background-color: var(--color-btn) !important;
+}
+
+@media screen and (min-width: 1200px) {
   .subscription {
     padding: 0px;
   }
@@ -218,11 +272,14 @@ button {
 }
 
 .choose-plan {
-  padding: 32px 28px 48px 28px;
   border-radius: 26px;
-  margin: 8px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 232px;
+  cursor: pointer;
 }
-.choose-plan > div {
+
+.most-popular {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,27 +290,11 @@ button {
   height: 27px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-family: var(--main-font-family);
   font-weight: 800;
   line-height: 15px;
   font-size: 10px;
-}
-.choose-plan > p {
-  font-size: 17px;
-}
-.choose-plan > h3 {
-  margin-top: 20px;
-  color: var(--color-purple);
-  line-height: 42px;
-  font-size: 28px;
-}
-.choose-plan > button {
-  background-color: var(--color-purple);
-  border-radius: 24px;
-  width: 232px;
-  height: 45px;
-  color: var(--color-white);
 }
 
 .description {
@@ -263,7 +304,8 @@ button {
   line-height: 25px;
   font-size: 15px;
 }
-.description > span {
+
+.description-price {
   font-family: var(--main-font-family);
   font-weight: var(--bold-font-weight);
   color: var(--color-purple);
@@ -271,9 +313,34 @@ button {
   font-size: 36px;
 }
 
+.description-title {
+  font-family: var(--main-font-family);
+  font-weight: var(--medium-font-weight);
+  line-height: 25px;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  color: var(--color-purple);
+  line-height: 42px;
+  font-size: 28px;
+}
+
 .description-list {
   margin-top: 20px;
   margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.choose-btn {
+  background-color: var(--color-purple);
+  border-radius: 24px;
+  width: 232px;
+  height: 45px;
+  color: var(--color-white);
+}
+
+.choose-btn:hover {
+  background-color: var(--color-btn) !important;
 }
 
 .circle {
@@ -281,28 +348,37 @@ button {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .plans {
-    padding: 90px 0px 0px 0px;
+    padding: 0px;
     margin-left: auto;
     margin-right: auto;
-    width: 937px;
+    margin-top: 90px;
+    width: 926px;
   }
   .plans-position {
+    position: relative;
     flex-direction: row;
     justify-content: space-around;
-    align-items: stretch;
     margin-bottom: 69px;
   }
   .choose-plan {
-    margin: 40px 34px 40px 34px;
+    position: relative;
     padding: 0px;
+    width: 232px;
+    height: 387px;
+    margin: 40px 0px 0px 0px;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     justify-content: space-between;
-    width: 232px;
   }
-  .choose-plan > p {
-    margin-top: 40px;
+  .most-popular {
+    position: absolute;
+    left: 100px;
+    top: -55px;
+  }
+  .description-list {
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=main.css.map */
